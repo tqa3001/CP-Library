@@ -1,0 +1,39 @@
+Geometry notes because I'm bad at geometry 	
+-----------------------------------------------------------------------------
+I. radians + trigonometry									
+I.1 rad									
+- 1 radian = angle -> arc length = 1 -> 360deg = 2pi radian, 180 = 1pi radian,									
+- rotate by x = rotate = 360 - x									
+- expressed in radian: x -> 2pi - x									
+(positive -> ccw by convention)									
+(negative x-> rotate x deg, clockwise)									
+- 1 deg = 2pi / 360									
+									
+I.2 trigonometric functions									
+When working with radians, draw a circle with radii 1.									
+cos(). sin(). tan().									
+acos(). asin(), atan(), atan2()									
+									
+all functions above: f(x) -> x is in radian.									
+i.e find cos(30)									
+ld res = cos(2pi / 360 * 30) = cos(2pi / 12)									
+									
+acos(x) = cos(x) ^ -1 (given distance to y axis, cal arc length)									
+(arccos)									
+----------------------------------------------------------------------------
+II. Rotation									
+1. rotation matrix R									
+[ cos(x) -sin(x) ]									
+[ sin(x) cos(x)  ]									
+									
+rotate (x, y) by alpha (in radian) -> [x', y]									
+									
+[x'] = R * [x]									
+[y']       [y]									
+									
+perhaps the best thing is you can find this matrix just by doing some math.									
+(x, y) = (1,0) * x, (0, 1) * y									
+-> we investigate how (1, 0) and (0, 1) changes when rotated by a									
+-> draw perpendicular lines -> ... -> ez to see (1, 0) -> (cos(a), sin(a)), (0, 1) = (-sin(a), cos(a))			
+-> (x', y') = (x cos(a), x sin(a)) + (-y sin(a), y cos(a)) (vector addition)									
+also trick to remember: det(R) = 1									
